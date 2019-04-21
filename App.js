@@ -20,13 +20,17 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Button title="" style={styles.beatPad}/>
-        <Button title="" style={styles.beatPad}/>
-        <Button title="" style={styles.beatPad}/>
-        <Button title="" style={styles.beatPad}/>
-        <Button title="" style={styles.beatPad}/>
-        <Button title="" style={styles.beatPad}/>
+      <View style={{ flex: 1, backgroundColor: '#303030' }}>
+        <View style={styles.container}>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+          <View style={styles.beatPad}/>
+        </View>
       </View>
     );
   }
@@ -35,23 +39,19 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+    marginTop: 70,
+    alignItems: 'center'
   },
   beatPad: {
-    height: 30,
-    width: 30,
-    backgroundColor: 'gray'
+    backgroundColor: '#939393',
+    height: 150,
+    width: 150,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 10,
+    marginBottom: 10
   }
 });
