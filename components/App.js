@@ -7,7 +7,8 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Button, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
+import BeatPad from './BeatPad';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,14 +23,14 @@ export default class App extends Component<Props> {
     return (
       <View style={{ flex: 1, backgroundColor: '#303030' }}>
         <View style={styles.container}>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
-          <View style={styles.beatPad}/>
+          <BeatPad />
+          <BeatPad />
+          <BeatPad />
+          <BeatPad />
+          <BeatPad />
+          <BeatPad />
+          <BeatPad />
+          <BeatPad />
         </View>
       </View>
     );
@@ -44,14 +45,5 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     marginTop: 70,
     alignItems: 'center'
-  },
-  beatPad: {
-    backgroundColor: '#939393',
-    height: 150,
-    width: 150,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 10,
-    marginBottom: 10
   }
 });
